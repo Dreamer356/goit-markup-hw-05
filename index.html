@@ -399,28 +399,28 @@
       </svg>
     </button>
     
-    <p class="custom-modal_title">Leave your contacts and we will call you back</p>
+    <p class="custom-modal_title" style="margin-bottom: 24px;">Leave your contacts and we will call you back</p>
     
     <form class="custom-modal_form">
       <!-- Поле имени -->
-      <div class="custom-modal_field">
-        <label for="custom-name" class="custom-modal_label">Name</label>
+      <div class="custom-modal_field" style="margin-bottom: 8px;">
+        <label for="user-name" class="custom-modal_label">Name</label>
         <div class="custom-modal_input-wrap">
           <input 
             type="text" 
-            name="custom-name" 
-            id="custom-name" 
+            name="user-name" 
+            id="user-name" 
             class="custom-modal_input" 
             required
           >
-          <svg class="custom-modal_input-icon" width="18" height="18">
+          <svg class="custom-modal_input-icon" width="24" height="24">
             <use href="./images/icons.svg#Vector"></use>
           </svg>
         </div>
       </div>
       
       <!-- Поле телефона -->
-      <div class="custom-modal_field">
+      <div class="custom-modal_field" style="margin-bottom: 8px;">
         <label for="custom-phone" class="custom-modal_label">Phone</label>
         <div class="custom-modal_input-wrap">
           <input 
@@ -430,14 +430,14 @@
             class="custom-modal_input" 
             required
           >
-          <svg class="custom-modal_input-icon" width="18" height="18">
+          <svg class="custom-modal_input-icon" width="24" height="24">
             <use href="./images/icons.svg#Vector-2"></use>
           </svg>
         </div>
       </div>
       
       <!-- Поле email -->
-      <div class="custom-modal_field">
+      <div class="custom-modal_field" style="margin-bottom: 8px;">
         <label for="custom-email" class="custom-modal_label">Email</label>
         <div class="custom-modal_input-wrap">
           <input 
@@ -447,34 +447,35 @@
             class="custom-modal_input" 
             required
           >
-          <svg class="custom-modal_input-icon" width="18" height="18">
+          <svg class="custom-modal_input-icon" width="24" height="24">
             <use href="./images/icons.svg#Vector-3"></use>
           </svg>
         </div>
       </div>
       
       <!-- Поле комментария -->
-      <div class="custom-modal_field">
-        <label for="custom-comment" class="custom-modal_label">Comment</label>
+      <div class="custom-modal_field custom-modal_textarea-field" style="margin-bottom: 16px;">
+        <label for="user-comment" class="custom-modal_label">Comment</label>
         <textarea 
-          name="custom-comment" 
-          id="custom-comment" 
+          name="user-comment" 
+          id="user-comment" 
           class="custom-modal_textarea" 
           placeholder="Text input"
         ></textarea>
       </div>
       
       <!-- Чекбокс -->
-      <div class="custom-modal_field">
+      <div class="custom-modal_field custom-modal_privacy-field" style="margin-bottom: 24px;">
         <input 
           type="checkbox" 
-          name="custom-privacy" 
-          id="custom-privacy" 
+          name="user-privacy" 
+          id="user-privacy" 
+          value="true"
           class="custom-modal_checkbox visually-hidden"
           required
         >
-        <label for="custom-privacy" class="custom-modal_privacy-label">
-          <span class="custom-modal_checkbox-icon">
+        <label for="user-privacy" class="custom-modal_privacy-label">
+          <span class="custom-modal_checkbox-icon" style="display: inline-flex;">
             <svg width="10" height="8">
               <use href="./images/icons.svg#check"></use>
             </svg>
