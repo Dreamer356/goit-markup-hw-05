@@ -800,7 +800,6 @@ img {
 
 /* Чекбокс */
 .custom-modal_privacy-label {
-  display: flex;
   align-items: center;
   font-size: 12px;
   line-height: 1.17;
@@ -810,7 +809,6 @@ img {
 
 .custom-modal_checkbox-icon {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
