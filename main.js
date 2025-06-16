@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal-order');
   const openModalBtn = document.querySelector('.order-service-btn');
   const closeModalBtn = modal.querySelector('.modal-close');
+  const form = modal.querySelector('.modal-form');
 
   function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth;
@@ -40,5 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) {
       closeModal();
     }
+  });
+
+  // Закрытие модалки после отправки формы
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.reset();
+    closeModal();
   });
 });
