@@ -710,6 +710,9 @@ body {
 }
 
 /* Параграф-описание */
+:root {
+  --modal-desc-color: #2e2f42;
+}
 .modal-desc {
   font-weight: 500;
   font-size: 16px;
