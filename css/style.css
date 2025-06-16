@@ -645,9 +645,9 @@ img {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-              visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-              transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+              visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .custom-modal.is-open {
   opacity: 1;
   visibility: visible;
@@ -667,6 +667,7 @@ img {
               0px 1px 3px rgba(0, 0, 0, 0.12),
               0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Кнопка закрытия */
@@ -699,8 +700,8 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.custom-modal_close-btn:hover .custom-modal__close-icon,
-.custom-modal_close-btn:focus .custom-modal__close-icon {
+.custom-modal_close-btn:hover .custom-modal_close-icon,
+.custom-modal_close-btn:focus .custom-modal_close-icon {
   fill: #ffffff;
 }
 
@@ -722,6 +723,14 @@ img {
 
 .custom-modal_field {
   margin-bottom: 8px;
+}
+
+.custom-modal_textarea-field {
+  margin-bottom: 16px;
+}
+
+.custom-modal_privacy-field {
+  margin-bottom: 24px;
 }
 
 .custom-modal_label {
@@ -832,6 +841,7 @@ img {
   height: 56px;
   margin-top: 24px;
   padding: 16px 32px;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -887,4 +897,6 @@ img {
 
 .no-scroll {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
