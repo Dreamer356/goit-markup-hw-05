@@ -1,52 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('modal-order');
-  const openModalBtn = document.querySelector('.order-service-btn');
-  const closeModalBtn = modal.querySelector('.modal-close');
-  const form = modal.querySelector('.modal-form');
-
-  function getScrollbarWidth() {
-    return window.innerWidth - document.documentElement.clientWidth;
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  const customModal = document.querySelector('.custom-modal');
+  const customModalOpenBtns = document.querySelectorAll('.order-service-btn');
+  const customModalCloseBtn = document.querySelector('.custom-modal__close-btn');
+  const customModalForm = document.querySelector('.custom-modal__form');
 
   function openModal(e) {
-    if (e) e.preventDefault();
-    modal.classList.add('is-open');
-    modal.classList.remove('is-hidden');
-    const scrollBarWidth = getScrollbarWidth();
-    document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = scrollBarWidth + 'px';
-  }
-
-  function closeModal(e) {
-    if (e) e.preventDefault();
-    modal.classList.remove('is-open');
-    modal.classList.add('is-hidden');
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
-  }
-
-  if (openModalBtn) {
-    openModalBtn.addEventListener('click', openModal);
-  }
-
-  closeModalBtn.addEventListener('click', closeModal);
-
-  modal.addEventListener('mousedown', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-      closeModal();
-    }
-  });
-
-  // Закрытие модалки после отправки формы
-  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    form.reset();
-    closeModal();
+
+    // Вычисление ширины скроллбара
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.paddingRight = `${scrollBarWidth}px`;
+
+    customModal.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+  }
+
+  function closeModal() {
+    customModal.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+    document.body.style.paddingRight = ''; // Убираем компенсацию скроллбара
+  }
+
+  customModalOpenBtns.forEach(btn => {
+    btn.addEventListener('click', openModal);
   });
+
+  customModalCloseBtn.addEventListener('click', closeModal);
+
+  customModal.addEventListener('click', function (e) {
+    if (e.target === customModal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && customModal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+
+  if (customModalForm) {
+    customModalForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      closeModal();
+    });
+  }
 });

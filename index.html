@@ -390,57 +390,101 @@
     </div>
   </div>
 </footer>
-<!-- Кнопка для открытия модального окна -->
-<button class="order-service-btn" type="button">Order Service</button>
-
-<div class="modal-overlay is-hidden" id="modal-order">
-  <div class="modal-window">
-    <button type="button" class="modal-close" aria-label="Close modal">
-      <svg width="8" height="8">
+<!-- Модальное окно -->
+<div class="custom-modal" id="modal-order">
+  <div class="custom-modal__content">
+    <button type="button" class="custom-modal__close-btn">
+      <svg width="8" height="8" class="custom-modal__close-icon">
         <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
-    <p class="modal-desc"></p>
-    <h2 class="modal-title">Leave your contacts and we will call you back</h2>
-    <form class="modal-form">
-      <label class="modal-label">
-        Name
-        <span class="modal-input-wrapper">
-          <input type="text" id="user-name" name="user-name" class="modal-input" required />
-          <svg class="modal-input-icon" width="18" height="24">
+    
+    <p class="custom-modal__title">Leave your contacts and we will call you back</p>
+    
+    <form class="custom-modal__form">
+      <!-- Поле имени -->
+      <div class="custom-modal__field">
+        <label for="custom-name" class="custom-modal__label">Name</label>
+        <div class="custom-modal__input-wrap">
+          <input 
+            type="text" 
+            name="custom-name" 
+            id="custom-name" 
+            class="custom-modal__input" 
+            required
+          >
+          <svg class="custom-modal__input-icon" width="18" height="18">
             <use href="./images/icons.svg#Vector"></use>
           </svg>
-        </span>
-      </label>
-      <label class="modal-label">
-        Phone
-        <span class="modal-input-wrapper">
-          <input type="tel" id="user-phone" name="user-phone" class="modal-input" required />
-          <svg class="modal-input-icon" width="18" height="24">
+        </div>
+      </div>
+      
+      <!-- Поле телефона -->
+      <div class="custom-modal__field">
+        <label for="custom-phone" class="custom-modal__label">Phone</label>
+        <div class="custom-modal__input-wrap">
+          <input 
+            type="tel" 
+            name="custom-phone" 
+            id="custom-phone" 
+            class="custom-modal__input" 
+            required
+          >
+          <svg class="custom-modal__input-icon" width="18" height="18">
             <use href="./images/icons.svg#Vector-2"></use>
           </svg>
-        </span>
-      </label>
-      <label class="modal-label">
-        Email
-        <span class="modal-input-wrapper">
-          <input type="email" id="user-email" name="user-email" class="modal-input" required />
-          <svg class="modal-input-icon" width="18" height="24">
+        </div>
+      </div>
+      
+      <!-- Поле email -->
+      <div class="custom-modal__field">
+        <label for="custom-email" class="custom-modal__label">Email</label>
+        <div class="custom-modal__input-wrap">
+          <input 
+            type="email" 
+            name="custom-email" 
+            id="custom-email" 
+            class="custom-modal__input" 
+            required
+          >
+          <svg class="custom-modal__input-icon" width="18" height="18">
             <use href="./images/icons.svg#Vector-3"></use>
           </svg>
-        </span>
-      </label>
-      <label class="modal-label modal-label-textarea" for="user-comment">
-        Comment
-        <textarea id="user-comment" name="user-comment" class="modal-textarea" placeholder="Text input"></textarea>
-      </label>
-      <label class="modal-checkbox-label" for="user-privacy">
-        <input type="checkbox" id="user-privacy" name="user-privacy" value="true" class="modal-checkbox" required />
-        <span class="modal-checkbox-custom"></span>
-        I accept the terms and conditions of the
-        <a href="#" class="modal-policy-link">Privacy Policy</a>
-      </label>
-      <button type="submit" class="modal-submit-btn">Send</button>
+        </div>
+      </div>
+      
+      <!-- Поле комментария -->
+      <div class="custom-modal__field">
+        <label for="custom-comment" class="custom-modal__label">Comment</label>
+        <textarea 
+          name="custom-comment" 
+          id="custom-comment" 
+          class="custom-modal__textarea" 
+          placeholder="Text input"
+        ></textarea>
+      </div>
+      
+      <!-- Чекбокс -->
+      <div class="custom-modal__field">
+        <input 
+          type="checkbox" 
+          name="custom-privacy" 
+          id="custom-privacy" 
+          class="custom-modal__checkbox visually-hidden"
+          required
+        >
+        <label for="custom-privacy" class="custom-modal__privacy-label">
+          <span class="custom-modal__checkbox-icon">
+            <svg width="10" height="8">
+              <use href="./images/icons.svg#check"></use>
+            </svg>
+          </span>
+          I accept the terms and conditions of the <a href="#" class="custom-modal__privacy-link">Privacy Policy</a>
+        </label>
+      </div>
+      
+      <!-- Кнопка отправки -->
+      <button type="submit" class="custom-modal__submit-btn">Send</button>
     </form>
   </div>
 </div>
