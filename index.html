@@ -400,45 +400,43 @@
     <p class="modal-desc"></p>
     <h2 class="modal-title">Leave your contacts and we will call you back</h2>
     <form class="modal-form">
-      <div class="form-field">
-        <label class="form-label" for="user-name">Name</label>
+      <label class="modal-label">
+        Name
         <span class="modal-input-wrapper">
-          <input type="text" class="modal-input" id="user-name" name="name" required>
+          <input type="text" class="modal-input" name="name" required>
           <svg class="modal-input-icon" width="18" height="24">
             <use href="./images/icons.svg#Vector"></use>
           </svg>
         </span>
-      </div>
-      <div class="form-field">
-        <label class="form-label" for="user-phone">Phone</label>
+      </label>
+      <label class="modal-label">
+        Phone
         <span class="modal-input-wrapper">
-          <input type="tel" class="modal-input" id="user-phone" name="phone" required>
+          <input type="tel" class="modal-input" name="phone" required>
           <svg class="modal-input-icon" width="18" height="24">
             <use href="./images/icons.svg#Vector-2"></use>
           </svg>
         </span>
-      </div>
-      <div class="form-field">
-        <label class="form-label" for="user-email">Email</label>
+      </label>
+      <label class="modal-label">
+        Email
         <span class="modal-input-wrapper">
-          <input type="email" class="modal-input" id="user-email" name="email" required>
+          <input type="email" class="modal-input" name="email" required>
           <svg class="modal-input-icon" width="18" height="24">
             <use href="./images/icons.svg#Vector-3"></use>
           </svg>
         </span>
-      </div>
-      <div class="form-field">
-        <label class="form-label modal-label-textarea" for="user-comment">Comment</label>
-        <textarea class="modal-textarea" id="user-comment" name="comment" placeholder="Text input"></textarea>
-      </div>
-      <div class="form-field">
-        <label class="modal-checkbox-label">
-          <input type="checkbox" class="modal-checkbox" required>
-          <span class="modal-checkbox-custom"></span>
-          I accept the terms and conditions of the
-          <a href="#" class="modal-policy-link">Privacy Policy</a>
-        </label>
-      </div>
+      </label>
+      <label class="modal-label modal-label-textarea">
+        Comment
+        <textarea class="modal-textarea" name="comment" placeholder="Text input"></textarea>
+      </label>
+      <label class="modal-checkbox-label">
+        <input type="checkbox" class="modal-checkbox" required>
+        <span class="modal-checkbox-custom"></span>
+        I accept the terms and conditions of the
+        <a href="#" class="modal-policy-link">Privacy Policy</a>
+      </label>
       <button type="submit" class="modal-submit-btn">Send</button>
     </form>
   </div>
