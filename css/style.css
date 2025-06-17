@@ -833,6 +833,7 @@ img {
               border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
               fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 2px;
+  position: relative;
 }
 
 .custom-modal_checkbox-icon svg {
