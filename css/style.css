@@ -835,10 +835,6 @@ img {
   top: 2px;
 }
 
-.custom-modal_checkbox-icon {
-  position: relative;
-}
-
 .custom-modal_checkbox-icon svg {
   position: absolute;
   top: 50%;
