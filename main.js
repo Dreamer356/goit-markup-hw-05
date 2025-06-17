@@ -3,28 +3,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const customModalOpenBtns = document.querySelectorAll('.order-service-btn');
   const customModalCloseBtn = document.querySelector('.custom-modal_close-btn');
   const customModalForm = document.querySelector('.custom-modal_form');
-  
-  // Запоминаем текущую ширину полосы прокрутки
+  const userPrivacyCheckbox = document.getElementById('user-privacy');
+
   let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
   function openModal(e) {
     e.preventDefault();
-    
-    // Добавляем padding-right равный ширине полосы прокрутки перед добавлением no-scroll
     document.body.style.paddingRight = scrollbarWidth + 'px';
     document.body.classList.add('no-scroll');
-    
     customModal.classList.add('is-open');
   }
 
   function closeModal() {
     customModal.classList.remove('is-open');
-    
-    // Удаляем no-scroll и padding-right
     document.body.classList.remove('no-scroll');
     document.body.style.paddingRight = '';
   }
-  
+
   customModalOpenBtns.forEach(btn => {
     btn.addEventListener('click', openModal);
   });
@@ -51,4 +46,15 @@ document.addEventListener('DOMContentLoaded', function() {
       closeModal();
     });
   }
+
+  if (userPrivacyCheckbox) {
+    userPrivacyCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        // действия при отметке чекбокса
+      } else {
+        // действия при снятии отметки
+      }
+    });
+  }
 });
+
